@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MapsActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3A7CA5"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/backbutton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:background="#3A7CA5"
+                android:padding="120dp"
+                >
+            </ImageButton>
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+
+            android:src="@drawable/baseline_restaurant_24" />
+
+        <ImageButton
+            android:id="@+id/atm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:src="@drawable/baseline_local_atm_24" />
+
+        <ImageButton
+            android:id="@+id/hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:src="@drawable/baseline_local_hospital_24" />
+
+        <ImageButton
+            android:id="@+id/bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:src="@drawable/baseline_comment_bank_24" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/construction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearlayout"
+        android:background="#16425B"
+        android:orientation="horizontal"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/itcsansbold"
+            android:text="Map is Under Construction!!!\nPlease go back to home page to navigate"
+            android:textAlignment="center"
+            android:textColor="#D9DCD6"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearlayout"
+        android:layout_marginTop="76dp" />
+
+</RelativeLayout>
